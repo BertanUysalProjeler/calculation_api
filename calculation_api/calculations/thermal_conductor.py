@@ -111,7 +111,7 @@ def _get_material(material: Union[int, str]) -> ThermCondMaterial:
                 return m
         raise ValueError(f"material not found: {material}")
 
-def compute_heat_load_mm(
+def compute_heat_load(
     *,
     material: Union[int, str],
     shape: Literal["rod", "tube", "rect"],
@@ -148,3 +148,4 @@ def compute_heat_load_mm(
         "area_over_length_mm": a_over_l_mm,
         "warnings": warnings
     }
+
