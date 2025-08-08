@@ -3,7 +3,7 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-from typing import Optional
+from typing import Optional, Literal, Union, List, Any
 import uvicorn
 
 # FastAPI app oluştur
@@ -98,3 +98,4 @@ async def health_check():
 # Server çalıştır (development için)
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
+
