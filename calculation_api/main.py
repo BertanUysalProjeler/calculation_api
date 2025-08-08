@@ -18,7 +18,7 @@ app.add_middleware(
 async def calc(
     material: str = Form(...),
     shape: str = Form(...),
-    units: str = Form("cm"),
+    units: str = Form("mm"),
     length: float = Form(...),
     temp_hi: float = Form(...),
     temp_lo: float = Form(...),
@@ -43,3 +43,4 @@ async def calc(
         return {"result": result}
     except Exception as e:
         return {"error": str(e)}
+
