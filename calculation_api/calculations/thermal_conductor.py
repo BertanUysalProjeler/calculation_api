@@ -188,12 +188,13 @@ def compute_heat_load(
 
     hi_int = _calc_cond_integral_mm(mat, temp_hi)
     lo_int = _calc_cond_integral_mm(mat, temp_lo)
-    heat_leak_watts = (hi_int - lo_int) * (a_over_l_mm / 1000)
+    heat_leak_watts = (hi_int - lo_int) * (a_over_l_mm / 10)
 
     return {
         "heat_load_watts": float(f"{heat_leak_watts:.3g}"),
         "area_over_length_mm": a_over_l_mm,
         "warnings": warnings
     }
+
 
 
