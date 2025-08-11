@@ -192,9 +192,10 @@ def compute_heat_load(
 
     return {
         "heat_load_watts": float(f"{heat_leak_watts:.3g}"),
-        "area_over_length_mm": float(f"{a_over_l_mm:.4g}"),
+        "area_over_length_mm": float(f"{a_over_l_mm:.3g}"),
         "warnings": warnings
     }
+
 
 
 
